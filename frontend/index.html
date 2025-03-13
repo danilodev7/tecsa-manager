@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecsa Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Tecsa Manger</h1>
+        <p class="lead">Sistema de gerenciamento de tarefas</p>
+        <form id="create-task-form">
+            <div class="form-group">
+                <label for="title">Tarefa</label>
+                <input type="text" class="form-control" id="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Descrição</label>
+                <textarea class="form-control" id="description" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select class="form-control" id="status" required>
+                    <option value="pendente">Pendente</option>
+                    <option value="em andamento">Em Andamento</option>
+                    <option value="concluída">Concluída</option>
+                </select>
+            </div>  
+            <button type="submit" class="btn btn-primary">Criar Tarefa</button>
+        </form>
+    </div>
+
+    <div class="container mt-5">
+        <h2>Tarefas</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tasks-table-body">
+                <!-- Aqui serão inseridas as tarefas -->
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

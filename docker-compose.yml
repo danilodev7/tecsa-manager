@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: task-manager-tecsa
+    volumes:
+      - ./backend:/var/www/backend
+      - ./frontend:/var/www/html
+    ports:
+      - "9000:80"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    container_name: task-manager-tecsa-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tecsa_manager
+      MYSQL_USER: tecsa
+      MYSQL_PASSWORD: tecsa_
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes: 
+  db_data:
