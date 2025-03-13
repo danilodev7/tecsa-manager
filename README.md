@@ -1,4 +1,4 @@
-# Task Manager
+⁸# Task Manager
 
 ## Descrição do Projeto
 
@@ -24,7 +24,6 @@ Aplicação de gerenciamento de tarefas com backend em PHP e frontend em HTML, C
 
 2. Inicie os contêineres Docker:
    ```sh
-   cd docker
    docker-compose up -d
    ```
 
